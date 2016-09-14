@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "65E71B0513DBFB09F39CEEF3A8B769CB93E66994",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4180EDE08E28E4A1E04BD42F57CA5BC6A39C24CA" : 9223372036854775807,
+    "65E71B0513DBFB09F39CEEF3A8B769CB93E66994" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F83C9C47-E36B-439C-9F82-6FA98EC83254",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4180EDE08E28E4A1E04BD42F57CA5BC6A39C24CA" : "..",
+    "65E71B0513DBFB09F39CEEF3A8B769CB93E66994" : "SSZipArchive\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ZipArchive",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ZipArchive.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Lightricks\/Foundations.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4180EDE08E28E4A1E04BD42F57CA5BC6A39C24CA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Lightricks\/ZipArchive.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "65E71B0513DBFB09F39CEEF3A8B769CB93E66994"
+    }
+  ]
+}
