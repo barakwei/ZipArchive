@@ -16,6 +16,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var zipButton: UIButton!
     @IBOutlet weak var unzipButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
@@ -29,11 +30,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        file1.text = ""
+        file2.text = ""
+        file3.text = ""
     }
 
     // MARK: IBAction
@@ -41,12 +41,23 @@ class ViewController: UIViewController {
     @IBAction func zipPressed(_: UIButton) {
         let sampleDataPath = Bundle.main.bundleURL.appendingPathComponent("Sample Data").path
         zipPath = tempZipPath()
+        let password = passwordField.text
 
-        let success = SSZipArchive.createZipFile(atPath: zipPath!, withContentsOfDirectory: sampleDataPath)
+        let success = SSZipArchive.createZipFile(atPath: zipPath!,
+                                                 withContentsOfDirectory: sampleDataPath,
+                                                 keepParentDirectory: false,
+                                                 compressionLevel: -1,
+                                                 password: password?.isEmpty == false ? password : nil,
+                                                 aes: true,
+                                                 progressHandler: nil)
         if success {
+            print("Success zip")
             unzipButton.isEnabled = true
             zipButton.isEnabled = false
+        } else {
+            print("No success zip")
         }
+        resetButton.isEnabled = true
     }
 
     @IBAction func unzipPressed(_: UIButton) {
@@ -58,8 +69,21 @@ class ViewController: UIViewController {
             return
         }
 
-        let success = SSZipArchive.unzipFile(atPath: zipPath, toDestination: unzipPath)
-        if !success {
+        let password = passwordField.text
+        let success: Bool = SSZipArchive.unzipFile(atPath: zipPath,
+                                                   toDestination: unzipPath,
+                                                   preserveAttributes: true,
+                                                   overwrite: true,
+                                                   nestedZipLevel: 1,
+                                                   password: password?.isEmpty == false ? password : nil,
+                                                   error: nil,
+                                                   delegate: nil,
+                                                   progressHandler: nil,
+                                                   completionHandler: nil)
+        if success != false {
+            print("Success unzip")
+        } else {
+            print("No success unzip")
             return
         }
 
@@ -84,7 +108,6 @@ class ViewController: UIViewController {
         }
 
         unzipButton.isEnabled = false
-        resetButton.isEnabled = true
     }
 
     @IBAction func resetPressed(_: UIButton) {
@@ -114,8 +137,6 @@ class ViewController: UIViewController {
         } catch {
             return nil
         }
-
-
         return url.path
     }
     
