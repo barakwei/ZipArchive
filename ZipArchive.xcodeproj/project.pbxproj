@@ -197,7 +197,7 @@
 		37952C5E1F63BB7100DD6677 /* ZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		389869341D5BC30100F18782 /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
 		AFF75A241C37279600F450AC /* ZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B423AE1A1C0DF76A0004A2F1 /* ZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B423AE1A1C0DF76A0004A2F1 /* ZipArchive-iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "ZipArchive-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B423AE3D1C0DF7950004A2F1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B423AE3F1C0DF7950004A2F1 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		B423AE401C0DF7950004A2F1 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
@@ -287,7 +287,7 @@
 		B423AE1B1C0DF76A0004A2F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B423AE1A1C0DF76A0004A2F1 /* ZipArchive.framework */,
+				B423AE1A1C0DF76A0004A2F1 /* ZipArchive-iOS.framework */,
 				AFF75A241C37279600F450AC /* ZipArchive.framework */,
 				37952C261F63B50D00DD6677 /* ZipArchive.framework */,
 				37952C5E1F63BB7100DD6677 /* ZipArchive.framework */,
@@ -517,7 +517,7 @@
 			);
 			name = "ZipArchive-iOS";
 			productName = ZipArchive;
-			productReference = B423AE1A1C0DF76A0004A2F1 /* ZipArchive.framework */;
+			productReference = B423AE1A1C0DF76A0004A2F1 /* ZipArchive-iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -976,7 +976,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ziparchive.ZipArchive;
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)-iOS";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1001,7 +1001,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ziparchive.ZipArchive;
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)-iOS";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
